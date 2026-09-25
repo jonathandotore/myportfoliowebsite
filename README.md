@@ -1,11 +1,13 @@
 # Portfolio — Jonathan
 
 🇺🇸 Personal portfolio website of **Jonathan**, a **.NET** and **Angular** developer, styled after the **Visual Studio dark theme** and **C# syntax highlighting colors**.
+
 🇧🇷 Site de portfólio pessoal de **Jonathan**, desenvolvedor **.NET** e **Angular**, com identidade visual inspirada no **tema escuro do Visual Studio** e nas **cores de sintaxe do C#**.
 
 ## ✨ Concept / Conceito
 
 🇺🇸 The design echoes a code editor: dark background, the signature C#/.NET purple as the accent color, and typographic details borrowed straight from syntax highlighting (comments, keywords, variable names). The site itself is meant to visually communicate the developer's stack.
+
 🇧🇷 O design remete a um editor de código: fundo escuro, o roxo característico da marca C#/.NET como cor de destaque, e detalhes tipográficos emprestados diretamente da sintaxe (comentários, palavras-chave, nomes de variáveis). O próprio site comunica visualmente a stack do desenvolvedor.
 
 ## 🧩 Sections / Seções
