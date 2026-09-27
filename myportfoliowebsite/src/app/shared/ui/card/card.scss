@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  padding: var(--space-md);
+  background-color: var(--vs-panel);
+  border: var(--border);
+  border-radius: var(--radius-md);
+}
+
+:host(.card--roomy) {
+  padding: var(--space-lg);
+}
+
+:host(.card--flush) {
+  padding: 0;
+  overflow: hidden;
+}
+
+:host(.card--code) {
+  background-color: var(--vs-code-bg);
+}
