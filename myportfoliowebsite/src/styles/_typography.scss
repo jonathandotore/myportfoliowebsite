@@ -1,0 +1,32 @@
+// Tipografia base. As fontes são carregadas em src/index.html (<link> + preconnect), o que permite
+// ao build de produção do Angular inlinear o CSS do Google Fonts.
+// Papéis fixos: display = Space Grotesk · corpo = IBM Plex Sans · código/rótulos = JetBrains Mono.
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--vs-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--vs-text-strong);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+}

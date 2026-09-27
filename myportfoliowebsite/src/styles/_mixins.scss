@@ -1,0 +1,53 @@
+// Mixins e breakpoints Sass. Não emite CSS sozinho, então é seguro importar em qualquer componente:
+//   @use 'mixins' as *;
+// Media queries não aceitam var(--x); por isso os breakpoints vivem aqui e não em _tokens.scss.
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+/// < 768px — coluna única, menu flutuante vira barra inferior.
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 0.02px}) {
+    @content;
+  }
+}
+
+/// < 1200px (tablet + mobile) — sidebar vira barra superior.
+@mixin below-desktop {
+  @media (max-width: #{$breakpoint-desktop - 0.02px}) {
+    @content;
+  }
+}
+
+/// ≥ 1200px — layout do protótipo.
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+/// Rótulo técnico: JetBrains Mono em maiúsculas com tracking leve (badges, botões, menus).
+@mixin technical-label($weight: 700) {
+  font-family: var(--font-mono);
+  font-weight: $weight;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-technical);
+}
+
+/// Anel de foco padrão do projeto.
+@mixin focus-ring($offset: 2px) {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: $offset;
+}
+
+/// Área de toque mínima de 44×44px.
+@mixin touch-target {
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
