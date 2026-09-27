@@ -1,0 +1,105 @@
+// Design tokens — ÚNICO arquivo do projeto onde valores de cor literais são permitidos.
+// Origem: specs.md §1–3 (tema escuro do Visual Studio + cores de sintaxe do C#).
+// Componentes consomem apenas var(--token); nunca hex direto.
+
+:root {
+  color-scheme: dark;
+
+  /* Base — fundos e superfícies */
+  --vs-bg: #1e1e1e;
+  --vs-panel: #252526;
+  --vs-panel-alt: #2d2d30;
+  --vs-code-bg: #141414;
+  --vs-thumb-bg: #1a1a1a;
+  --vs-border: #3f3f46;
+  --vs-border-dashed: #3f3f46;
+
+  /* Texto */
+  --vs-text: #d4d4d4;
+  --vs-text-strong: #f1f1f1;
+  --vs-text-muted: #bdbdbd;
+  --vs-text-muted-alt: #adadad;
+  --vs-text-dim: #9d9d9d;
+  --vs-line-number: #6e7681;
+
+  /* Acento — cores de sintaxe do C# */
+  --accent-primary: #68217a;
+  --accent-primary-hover: #7b2a90;
+  --accent-primary-light: #b180d7;
+  --syntax-type: #4ec9b0;
+  --syntax-keyword: #569cd6;
+  --syntax-string: #d69d85;
+  --syntax-comment: #57a64a;
+  --syntax-number: #b5cea8;
+  --syntax-local: #dcdcaa;
+  --syntax-interface: #b8d7a3;
+  --syntax-variable: #9cdcfe;
+
+  /* Texto sobre superfícies de destaque (contraste ≥ 4.5:1) */
+  --on-accent: #f3e8f7;
+  --on-accent-strong: #ffffff;
+  --on-highlight: var(--vs-bg);
+  --nav-active-bg: rgb(0 0 0 / 22%);
+
+  /* Semânticos — apelidos da paleta, nenhuma cor nova */
+  --focus-ring: var(--syntax-local);
+  --feedback-error: var(--syntax-string);
+  --feedback-success: var(--syntax-type);
+
+  /* Tipografia — três famílias, papéis fixos */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --fs-hero: clamp(3.5rem, 2rem + 6vw, 6rem); /* 96px */
+  --fs-hero-prefix: clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem); /* 40px */
+  --fs-section-title: clamp(2.25rem, 1.5rem + 3vw, 3.5rem); /* 56px */
+  --fs-h2: 1.25rem; /* 20px */
+  --fs-lead: 1.0625rem; /* 17px */
+  --fs-body: 1rem; /* 16px */
+  --fs-code: 0.9375rem; /* 15px */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-xs: 0.8125rem; /* 13px */
+  --fs-label: 0.75rem; /* 12px */
+
+  --lh-body: 1.6;
+  --lh-tight: 1.05;
+  --tracking-technical: 0.04em;
+  --tracking-hero: -0.01em;
+
+  /* Espaçamento — escala 4px/8px */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 56px;
+
+  /* Raios */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-full: 999px; /* pill */
+
+  /* Bordas */
+  --border: 1px solid var(--vs-border);
+  --border-dashed: 1px dashed var(--vs-border-dashed);
+  --border-accent-width: 3px;
+
+  /* Layout */
+  --touch-target: 44px;
+  --sidebar-width: 240px;
+  --sidebar-photo-height: 240px;
+  --topbar-height: 64px;
+  --floating-menu-width: 52px;
+  --floating-menu-offset: var(--space-md);
+  --content-max-width: 1200px;
+
+  /* Movimento */
+  --transition-fast: 150ms ease;
+
+  /* Camadas */
+  --z-topbar: 90;
+  --z-floating-menu: 100;
+  --z-skip-link: 200;
+}
