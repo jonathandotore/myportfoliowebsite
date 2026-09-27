@@ -1,0 +1,47 @@
+@use 'mixins' as *;
+
+:host {
+  @include technical-label(700);
+  @include touch-target;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: calc(var(--touch-target) + var(--space-xs));
+  padding: 0 var(--space-lg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+:host(.btn--primary) {
+  background-color: var(--accent-primary);
+  color: var(--on-accent-strong);
+
+  &:hover {
+    background-color: var(--accent-primary-hover);
+  }
+}
+
+:host(.btn--secondary) {
+  background-color: transparent;
+  border-color: var(--syntax-type);
+  color: var(--syntax-type);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--syntax-type) 12%, transparent);
+  }
+}
+
+:host(:disabled),
+:host([aria-disabled='true']) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
