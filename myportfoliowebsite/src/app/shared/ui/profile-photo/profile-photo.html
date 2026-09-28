@@ -1,7 +1,14 @@
 @if (src(); as src) {
-  <img class="profile-photo__img" [src]="src" [alt]="alt()" />
+  <img
+    class="profile-photo__img"
+    [src]="src"
+    [alt]="alt()"
+    decoding="async"
+    [attr.loading]="priority() ? null : 'lazy'"
+    [attr.fetchpriority]="priority() ? 'high' : null"
+  />
 } @else {
-  <!-- TODO: placeholder — some quando PROFILE.photoUrl for preenchido (core/profile/profile.ts) -->
+  <!-- Placeholder exibido enquanto não há foto (PROFILE.photoUrl = null em core/profile/profile.ts). -->
   <div class="profile-photo__placeholder" aria-hidden="true">
     <app-icon name="user" [size]="iconSize()" />
     @if (variant() !== 'avatar') {
