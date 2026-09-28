@@ -1,0 +1,12 @@
+:host {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  background-color: var(--vs-panel);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  color: var(--tile-tone);
+}

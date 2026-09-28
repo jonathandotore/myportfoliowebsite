@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+  color: var(--syntax-comment);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+}
+
+:host(.code-comment--md) {
+  font-size: var(--fs-body);
+}
+
+.slashes {
+  margin-inline-end: 1ch;
+}

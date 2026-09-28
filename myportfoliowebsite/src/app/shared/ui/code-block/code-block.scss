@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+
+.code-block {
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--vs-panel);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--fs-code);
+  line-height: 1.7;
+}
+
+.code-block__line {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.code-block__gutter {
+  flex-shrink: 0;
+  min-width: 2ch;
+  color: var(--vs-line-number);
+  text-align: right;
+  user-select: none;
+}
+
+.code-block__code {
+  font: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.tok-plain {
+  color: var(--vs-text);
+}
+.tok-keyword {
+  color: var(--syntax-keyword);
+}
+.tok-control {
+  color: var(--accent-primary-light);
+}
+.tok-type {
+  color: var(--syntax-type);
+}
+.tok-interface {
+  color: var(--syntax-interface);
+}
+.tok-string {
+  color: var(--syntax-string);
+}
+.tok-number {
+  color: var(--syntax-number);
+}
+.tok-comment {
+  color: var(--syntax-comment);
+}
+.tok-local {
+  color: var(--syntax-local);
+}
+.tok-variable {
+  color: var(--syntax-variable);
+}
