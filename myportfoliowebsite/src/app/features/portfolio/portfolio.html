@@ -1,0 +1,43 @@
+<app-section-header [file]="'portfolio.header.file' | translate" [heading]="'portfolio.header.title' | translate" />
+
+<div class="portfolio__filters" role="group" [attr.aria-label]="'portfolio.filters.label' | translate">
+    @for (filter of filters; track filter) {
+    <button appFilterChip [active]="activeFilter() === filter" (click)="activeFilter.set(filter)">
+        {{ 'portfolio.filters.' + filter | translate }}
+    </button>
+    }
+</div>
+
+<ul class="portfolio__grid">
+    @for (project of visibleProjects(); track project.id) {
+    <li>
+        <article appCard padding="none" class="project">
+            <div class="project__thumb" aria-hidden="true" [style.color]="project.color">
+                {{ project.glyph }}
+            </div>
+            <div class="project__body">
+                <h2 class="project__title">
+                    <a class="project__link" [href]="project.url" target="_blank" rel="noopener noreferrer">
+                        {{ project.titleKey | translate }}
+                        <span class="visually-hidden">({{ 'portfolio.opensInNewTab' | translate }})</span>
+                    </a>
+                </h2>
+                <p class="project__description">{{ project.descriptionKey | translate }}</p>
+                <div class="project__footer">
+                    <app-badge variant="text" size="sm" [tone]="project.tone">{{ project.tagsLabel }}</app-badge>
+                    <span class="project__source" aria-hidden="true">
+                        {{ 'portfolio.sourceLabel' | translate }}
+                        <app-icon name="external" [size]="14" />
+                    </span>
+                </div>
+            </div>
+        </article>
+    </li>
+    }
+
+    <li class="portfolio__soon">
+        <app-code-comment size="md">{{ 'portfolio.soon.comment' | translate }}</app-code-comment>
+        <p class="portfolio__soon-title">{{ 'portfolio.soon.title' | translate }}</p>
+        <p class="portfolio__soon-text">{{ 'portfolio.soon.text' | translate }}</p>
+    </li>
+</ul>

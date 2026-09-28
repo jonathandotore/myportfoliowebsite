@@ -174,5 +174,35 @@
       "label": "stack:",
       "listLabel": "Technologies"
     }
+  },
+  "portfolio": {
+    "header": {
+      "file": "portfolio.component.ts",
+      "title": "Portfolio"
+    },
+    "filters": {
+      "label": "Filter projects by technology",
+      "all": "All",
+      "dotnet": ".NET",
+      "angular": "Angular",
+      "fullstack": "Full-stack"
+    },
+    "opensInNewTab": "GitHub repository, opens in a new tab",
+    "sourceLabel": "View on GitHub",
+    "projects": {
+      "portfolio": {
+        "title": "Personal portfolio",
+        "description": "This website: Angular 22 with SSR/SSG, PT/EN language switching without page reloads, a token-based design system and a focus on accessibility."
+      },
+      "educaApp": {
+        "title": "EducaApp",
+        "description": "Technical assessment: a layered school-management REST API (students, classes and enrollments) with Dapper, SQL Server, Redis caching, Swagger and xUnit tests."
+      }
+    },
+    "soon": {
+      "comment": "TODO: add new projects",
+      "title": "Portfolio under construction",
+      "text": "New applications will show up here soon."
+    }
   }
 }
