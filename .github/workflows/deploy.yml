@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: myportfoliowebsite
     steps:
       - uses: actions/checkout@v4
 
@@ -24,9 +27,10 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: myportfoliowebsite/package-lock.json
 
       - run: npm ci
-      - run: npm run build -- --base-href=/NOME-DO-REPO/
+      - run: npm run build -- --base-href=/myportfoliowebsite/
 
       - name: Criar 404.html para as rotas do Angular
         run: |
@@ -35,7 +39,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/myportfoliowebsite/browser
+          path: myportfoliowebsite/dist/myportfoliowebsite/browser
 
   deploy:
     needs: build
