@@ -3,27 +3,41 @@
  * componentes mostram o placeholder traduzido correspondente.
  */
 export interface Profile {
-  readonly name: string;
-  /** Caminho da foto (servida de /public). `null` = placeholder "[SUA FOTO]". */
-  readonly photoUrl: string | null;
-  /** Números do "Sobre mim" (ex.: "5+"). Iguais nos dois idiomas; `null` = placeholder "[X]+". */
-  readonly stats: ProfileStats;
+    readonly name: string;
+    readonly photoUrl: string | null;
+    readonly stats: ProfileStats;
+    readonly contact: ProfileContact;
+}
+
+export interface ProfileContact {
+    readonly phoneDisplay: string;
+    readonly phoneDigits: string;
+    readonly emails: readonly string[];
+    readonly linkedin: string;
+    readonly github: string;
 }
 
 export interface ProfileStats {
-  readonly experience: string | null;
-  readonly projects: string | null;
-  readonly technologies: string | null;
-  readonly certifications: string | null;
+    readonly experience: string | null;
+    readonly projects: string | null;
+    readonly technologies: string | null;
+    readonly certifications: string | null;
 }
 
 export const PROFILE: Profile = {
-  name: 'Jonathan',
-  photoUrl: null, // TODO: placeholder — [SUA FOTO] (Home e sidebar)
-  stats: {
-    experience: '2+',
-    projects: '2+', // TODO: placeholder — [X]+
-    technologies: '17+', // TODO: placeholder — [X]+
-    certifications: '10+', // TODO: placeholder — [X]+
-  },
+    name: 'Jonathan',
+    photoUrl: null,
+    stats: {
+        experience: '2+',
+        projects: '2+',
+        technologies: '17+',
+        certifications: '10+',
+    },
+    contact: {
+        phoneDisplay: '+55 17 99775-0811',
+        phoneDigits: '5517997750811',
+        emails: ['jonathandotore@outlook.com', 'jonathan.dotoree@gmail.com'],
+        linkedin: 'https://www.linkedin.com/in/jonathan-dotore-519b261b3',
+        github: 'https://github.com/jonathandotore',
+    },
 };

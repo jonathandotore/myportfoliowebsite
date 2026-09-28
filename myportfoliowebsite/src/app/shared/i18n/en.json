@@ -1,208 +1,250 @@
 {
-  "meta": {
-    "siteTitle": "Jonathan · .NET & Angular Developer",
-    "pageTitle": "{{page}} · Jonathan",
-    "description": "Portfolio of Jonathan, a .NET and Angular developer: robust .NET APIs and modern Angular interfaces."
-  },
-  "a11y": {
-    "skipToContent": "Skip to content"
-  },
-  "language": {
-    "toggleShort": "PT",
-    "toggleLabel": "PT — switch language to Portuguese"
-  },
-  "nav": {
-    "mainLabel": "Main menu",
-    "quickLabel": "Quick navigation",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "home": "Home",
-    "about": "About me",
-    "resume": "Resume",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
-  },
-  "profile": {
-    "photoAlt": "Photo of Jonathan",
-    "photoPlaceholder": "[YOUR PHOTO]"
-  },
-  "home": {
-    "greeting": "Hello, welcome!",
-    "headingPrefix": "I am",
-    "role": ".NET & Angular Developer",
-    "intro": "I build robust APIs in .NET and modern interfaces in Angular.",
-    "ctaAbout": "About me",
-    "ctaContact": "Contact"
-  },
-  "about": {
-    "header": {
-      "file": "about-me.component.ts",
-      "title": "About me"
+    "meta": {
+        "siteTitle": "Jonathan · .NET & Angular Developer",
+        "pageTitle": "{{page}} · Jonathan",
+        "description": "Portfolio of Jonathan, a .NET and Angular developer: robust .NET APIs and modern Angular interfaces."
     },
-    "intro": {
-      "prefix": "I am",
-      "role": ".NET & Angular Developer"
+    "a11y": {
+        "skipToContent": "Skip to content"
     },
-    "bio": "Full-stack developer focused on .NET on the back end and Angular on the front end.",
-    "stats": {
-      "label": "In numbers",
-      "placeholderValue": "[X]+",
-      "experience": "Years of experience",
-      "projects": "Projects delivered",
-      "technologies": "Technologies",
-      "certifications": "Certifications"
+    "language": {
+        "toggleShort": "PT",
+        "toggleLabel": "PT — switch language to Portuguese"
     },
-    "services": {
-      "title": "What do I do?",
-      "backend": {
-        "title": "Back-end · .NET / C#",
-        "description": "REST APIs with ASP.NET Core, Entity Framework and clean architecture."
-      },
-      "frontend": {
-        "title": "Front-end · Angular / TS",
-        "description": "Responsive SPAs with Angular, TypeScript and RxJS."
-      },
-      "integrations": {
-        "title": "APIs & Integrations",
-        "description": "Integration between systems, databases and cloud services."
-      }
-    }
-  },
-  "resume": {
-    "header": {
-      "file": "resume.component.ts",
-      "title": "Resume"
+    "nav": {
+        "mainLabel": "Main menu",
+        "quickLabel": "Quick navigation",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "home": "Home",
+        "about": "About me",
+        "resume": "Resume",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
     },
-    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    "present": "present",
-    "experience": {
-      "variable": "experience",
-      "heading": "Experience",
-      "stackLabel": "Technologies used",
-      "items": {
-        "ecori": {
-          "role": "Software Developer",
-          "summary": "Mid-level developer on a B2B e-commerce platform for solar energy equipment resellers, building new features and keeping the production system maintainable.",
-          "highlights": [
-            {
-              "title": "Performance optimization",
-              "text": "Refactored critical routines and optimized queries with Dapper and EF Core, cutting a critical query's response time from 4s to 400ms (a 90% drop)."
+    "profile": {
+        "photoAlt": "Photo of Jonathan",
+        "photoPlaceholder": "[YOUR PHOTO]"
+    },
+    "home": {
+        "greeting": "Hello, welcome!",
+        "headingPrefix": "I am",
+        "role": ".NET & Angular Developer",
+        "intro": "I build robust APIs in .NET and modern interfaces in Angular.",
+        "ctaAbout": "About me",
+        "ctaContact": "Contact"
+    },
+    "about": {
+        "header": {
+            "file": "about-me.component.ts",
+            "title": "About me"
+        },
+        "intro": {
+            "prefix": "I am",
+            "role": ".NET & Angular Developer"
+        },
+        "bio": "Full-stack developer focused on .NET on the back end and Angular on the front end.",
+        "stats": {
+            "label": "In numbers",
+            "placeholderValue": "[X]+",
+            "experience": "Years of experience",
+            "projects": "Projects delivered",
+            "technologies": "Technologies",
+            "certifications": "Certifications"
+        },
+        "services": {
+            "title": "What do I do?",
+            "backend": {
+                "title": "Back-end · .NET / C#",
+                "description": "REST APIs with ASP.NET Core, Entity Framework and clean architecture."
             },
-            {
-              "title": "Stack migration",
-              "text": "Took part in migrating part of the legacy platform from .NET 8 / Angular 11 to .NET 10 / Angular 22, reducing technical debt and removing security vulnerabilities."
+            "frontend": {
+                "title": "Front-end · Angular / TS",
+                "description": "Responsive SPAs with Angular, TypeScript and RxJS."
             },
-            {
-              "title": "Architecture and patterns",
-              "text": "Applied Vertical Slice Architecture, DDD and CQRS to microservices development, ensuring separation of concerns and sustainable code evolution."
+            "integrations": {
+                "title": "APIs & Integrations",
+                "description": "Integration between systems, databases and cloud services."
             }
-          ]
-        },
-        "allRisk": {
-          "role": "Software Developer",
-          "summary": "Full-stack development with C#, .NET and Angular, delivering end-to-end solutions for internal applications.",
-          "highlights": [
-            {
-              "title": "Frontend from scratch",
-              "text": "Designed and built the entire frontend of an internal application as the initial sole frontend developer, defining the component architecture, code standards and API integration."
-            },
-            {
-              "title": "Structured backend",
-              "text": "Helped implement the .NET backend following DDD and CQRS, shaping the features that now support the core of the system."
-            },
-            {
-              "title": "Collaboration and quality",
-              "text": "Worked in a cross-functional team, taking part in code reviews and upholding development best practices."
-            }
-          ]
-        },
-        "sifat": {
-          "role": "Software Developer",
-          "summary": "Worked as a full-stack developer with PHP on the backend, Vue.js on the frontend and data persistence with Laravel/Eloquent."
-        },
-        "itravelDeveloper": {
-          "role": "C# ASP.NET Developer",
-          "summary": "Backend application development with C# and ASP.NET Core, focused on REST APIs and microservices.",
-          "highlights": [
-            {
-              "title": "Backend",
-              "text": "Built and maintained backend features, ensuring performance and alignment with business requirements."
-            },
-            {
-              "title": "APIs and integrations",
-              "text": "Developed REST APIs and integrated internal and external services, ensuring efficient communication between components."
-            },
-            {
-              "title": "Persistence",
-              "text": "Used Dapper and Entity Framework with SQL Server for data access, optimizing queries and ensuring data integrity."
-            },
-            {
-              "title": "Quality",
-              "text": "Worked with Git version control and contributed to CI/CD practices."
-            }
-          ]
-        },
-        "itravelSupport": {
-          "role": "Systems Support Analyst (Mid-level)"
-        },
-        "multidrogas": {
-          "role": "Implementation Consultant"
         }
-      }
     },
-    "education": {
-      "variable": "education",
-      "heading": "Education",
-      "items": {
-        "fmu": {
-          "course": "Associate Degree (CST) in Systems Analysis and Development",
-          "description": "In progress — expected completion in June 2027."
+    "resume": {
+        "header": {
+            "file": "resume.component.ts",
+            "title": "Resume"
+        },
+        "months": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ],
+        "present": "present",
+        "experience": {
+            "variable": "experience",
+            "heading": "Experience",
+            "stackLabel": "Technologies used",
+            "items": {
+                "ecori": {
+                    "role": "Software Developer",
+                    "summary": "Mid-level developer on a B2B e-commerce platform for solar energy equipment resellers, building new features and keeping the production system maintainable.",
+                    "highlights": [
+                        {
+                            "title": "Performance optimization",
+                            "text": "Refactored critical routines and optimized queries with Dapper and EF Core, cutting a critical query's response time from 4s to 400ms (a 90% drop)."
+                        },
+                        {
+                            "title": "Stack migration",
+                            "text": "Took part in migrating part of the legacy platform from .NET 8 / Angular 11 to .NET 10 / Angular 22, reducing technical debt and removing security vulnerabilities."
+                        },
+                        {
+                            "title": "Architecture and patterns",
+                            "text": "Applied Vertical Slice Architecture, DDD and CQRS to microservices development, ensuring separation of concerns and sustainable code evolution."
+                        }
+                    ]
+                },
+                "allRisk": {
+                    "role": "Software Developer",
+                    "summary": "Full-stack development with C#, .NET and Angular, delivering end-to-end solutions for internal applications.",
+                    "highlights": [
+                        {
+                            "title": "Frontend from scratch",
+                            "text": "Designed and built the entire frontend of an internal application as the initial sole frontend developer, defining the component architecture, code standards and API integration."
+                        },
+                        {
+                            "title": "Structured backend",
+                            "text": "Helped implement the .NET backend following DDD and CQRS, shaping the features that now support the core of the system."
+                        },
+                        {
+                            "title": "Collaboration and quality",
+                            "text": "Worked in a cross-functional team, taking part in code reviews and upholding development best practices."
+                        }
+                    ]
+                },
+                "sifat": {
+                    "role": "Software Developer",
+                    "summary": "Worked as a full-stack developer with PHP on the backend, Vue.js on the frontend and data persistence with Laravel/Eloquent."
+                },
+                "itravelDeveloper": {
+                    "role": "C# ASP.NET Developer",
+                    "summary": "Backend application development with C# and ASP.NET Core, focused on REST APIs and microservices.",
+                    "highlights": [
+                        {
+                            "title": "Backend",
+                            "text": "Built and maintained backend features, ensuring performance and alignment with business requirements."
+                        },
+                        {
+                            "title": "APIs and integrations",
+                            "text": "Developed REST APIs and integrated internal and external services, ensuring efficient communication between components."
+                        },
+                        {
+                            "title": "Persistence",
+                            "text": "Used Dapper and Entity Framework with SQL Server for data access, optimizing queries and ensuring data integrity."
+                        },
+                        {
+                            "title": "Quality",
+                            "text": "Worked with Git version control and contributed to CI/CD practices."
+                        }
+                    ]
+                },
+                "itravelSupport": {
+                    "role": "Systems Support Analyst (Mid-level)"
+                },
+                "multidrogas": {
+                    "role": "Implementation Consultant"
+                }
+            }
+        },
+        "education": {
+            "variable": "education",
+            "heading": "Education",
+            "items": {
+                "fmu": {
+                    "course": "Associate Degree (CST) in Systems Analysis and Development",
+                    "description": "In progress — expected completion in June 2027."
+                }
+            }
+        },
+        "certifications": {
+            "variable": "certifications",
+            "heading": "Certifications",
+            "items": {
+                "dataAccess": "Data access with .NET, C#, Dapper and SQL Server",
+                "csharpFirstSteps": "C# first steps: Programming Logic and Algorithms",
+                "databaseSql": "The complete Database and SQL course, no mysteries!",
+                "csharpComplete": "Complete C#: Object-Oriented Programming + Projects"
+            }
+        },
+        "stack": {
+            "label": "stack:",
+            "listLabel": "Technologies"
         }
-      }
     },
-    "certifications": {
-      "variable": "certifications",
-      "heading": "Certifications",
-      "items": {
-        "dataAccess": "Data access with .NET, C#, Dapper and SQL Server",
-        "csharpFirstSteps": "C# first steps: Programming Logic and Algorithms",
-        "databaseSql": "The complete Database and SQL course, no mysteries!",
-        "csharpComplete": "Complete C#: Object-Oriented Programming + Projects"
-      }
+    "portfolio": {
+        "header": {
+            "file": "portfolio.component.ts",
+            "title": "Portfolio"
+        },
+        "filters": {
+            "label": "Filter projects by technology",
+            "all": "All",
+            "dotnet": ".NET",
+            "angular": "Angular",
+            "fullstack": "Full-stack"
+        },
+        "opensInNewTab": "GitHub repository, opens in a new tab",
+        "sourceLabel": "View on GitHub",
+        "projects": {
+            "portfolio": {
+                "title": "Personal portfolio",
+                "description": "This website: Angular 22 with SSR/SSG, PT/EN language switching without page reloads, a token-based design system and a focus on accessibility."
+            },
+            "educaApp": {
+                "title": "EducaApp",
+                "description": "Technical assessment: a layered school-management REST API (students, classes and enrollments) with Dapper, SQL Server, Redis caching, Swagger and xUnit tests."
+            }
+        },
+        "soon": {
+            "comment": "TODO: add new projects",
+            "title": "Portfolio under construction",
+            "text": "New applications will show up here soon."
+        }
     },
-    "stack": {
-      "label": "stack:",
-      "listLabel": "Technologies"
+    "contact": {
+        "header": {
+            "file": "contact.component.ts",
+            "title": "Contact"
+        },
+        "invite": {
+            "prefix": "Feel free to",
+            "highlight": "get in touch!"
+        },
+        "intro": "Open to new opportunities, freelance projects and good conversations about .NET and Angular.",
+        "channels": {
+            "label": "Contact channels",
+            "phone": "WhatsApp / Telegram",
+            "whatsapp": "WhatsApp",
+            "telegram": "Telegram",
+            "email": "Email",
+            "linkedin": "LinkedIn",
+            "github": "GitHub",
+            "opensInNewTab": "opens in a new tab"
+        },
+        "form": {
+            "label": "Send a message",
+            "name": "name",
+            "email": "email",
+            "message": "message",
+            "submit": "Send message"
+        },
+        "footer": "Thanks for visiting!"
     }
-  },
-  "portfolio": {
-    "header": {
-      "file": "portfolio.component.ts",
-      "title": "Portfolio"
-    },
-    "filters": {
-      "label": "Filter projects by technology",
-      "all": "All",
-      "dotnet": ".NET",
-      "angular": "Angular",
-      "fullstack": "Full-stack"
-    },
-    "opensInNewTab": "GitHub repository, opens in a new tab",
-    "sourceLabel": "View on GitHub",
-    "projects": {
-      "portfolio": {
-        "title": "Personal portfolio",
-        "description": "This website: Angular 22 with SSR/SSG, PT/EN language switching without page reloads, a token-based design system and a focus on accessibility."
-      },
-      "educaApp": {
-        "title": "EducaApp",
-        "description": "Technical assessment: a layered school-management REST API (students, classes and enrollments) with Dapper, SQL Server, Redis caching, Swagger and xUnit tests."
-      }
-    },
-    "soon": {
-      "comment": "TODO: add new projects",
-      "title": "Portfolio under construction",
-      "text": "New applications will show up here soon."
-    }
-  }
 }
