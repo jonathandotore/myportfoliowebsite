@@ -34,8 +34,18 @@
   }
 }
 
+// Com a barra inferior, a lateral direita não precisa mais reservar espaço para o menu vertical,
+// e o fim do conteúdo ganha espaço para não ficar atrás da barra.
+@include bottom-nav {
+  .inner-layout__content {
+    padding-right: var(--space-xl);
+    padding-bottom: calc(var(--touch-target) + var(--space-2xl));
+  }
+}
+
 @include mobile {
   .inner-layout__content {
-    padding: var(--space-lg) var(--space-md) calc(var(--touch-target) + var(--space-2xl));
+    padding-top: var(--space-lg);
+    padding-inline: var(--space-md);
   }
 }

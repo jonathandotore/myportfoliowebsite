@@ -4,8 +4,10 @@
 
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1200px;
+/// Altura abaixo da qual o menu flutuante vertical não cabe ao lado da barra superior (celular deitado).
+$breakpoint-short-height: 500px;
 
-/// < 768px — coluna única, menu flutuante vira barra inferior.
+/// < 768px — coluna única.
 @mixin mobile {
   @media (max-width: #{$breakpoint-tablet - 0.02px}) {
     @content;
@@ -15,6 +17,15 @@ $breakpoint-desktop: 1200px;
 /// < 1200px (tablet + mobile) — sidebar vira barra superior.
 @mixin below-desktop {
   @media (max-width: #{$breakpoint-desktop - 0.02px}) {
+    @content;
+  }
+}
+
+/// Menu flutuante vira barra fixa inferior: telas estreitas (< 768px) ou baixas abaixo do desktop
+/// (< 500px de altura, ex.: celular deitado), onde o menu vertical invadiria a barra superior.
+@mixin bottom-nav {
+  @media (max-width: #{$breakpoint-tablet - 0.02px}),
+    (max-width: #{$breakpoint-desktop - 0.02px}) and (max-height: #{$breakpoint-short-height - 0.02px}) {
     @content;
   }
 }
