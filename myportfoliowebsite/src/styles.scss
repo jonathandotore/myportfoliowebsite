@@ -1,5 +1,6 @@
-// Estilos globais. Ordem: tokens → base → tipografia.
+// Estilos globais. Ordem: tokens → base → tipografia → formulários.
 // Estilos de componente ficam no próprio componente e usam `@use 'mixins' as *;` quando precisam de breakpoints.
 @use 'styles/tokens';
 @use 'styles/base';
 @use 'styles/typography';
+@use 'styles/forms';
