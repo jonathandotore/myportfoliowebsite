@@ -1,0 +1,124 @@
+@use 'mixins' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.about__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.about__lead {
+  color: var(--vs-text);
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+  line-height: 1.3;
+}
+
+.about__name {
+  color: var(--syntax-type);
+  font-weight: 600;
+}
+
+.about__role {
+  color: var(--syntax-local);
+}
+
+.about__bio {
+  color: var(--vs-text-muted);
+  font-size: var(--fs-lead);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+// Grid 2×2 estilo "terminal", com divisórias tracejadas só entre as células.
+.about__stats {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 12rem;
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+
+  &:nth-child(odd) {
+    border-right: var(--border-dashed);
+  }
+
+  &:nth-child(-n + 2) {
+    border-bottom: var(--border-dashed);
+  }
+}
+
+.about__stat-value {
+  color: var(--syntax-number);
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about__stat-label {
+  color: var(--vs-text);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: var(--tracking-technical);
+  text-transform: uppercase;
+}
+
+.about__services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__service-list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about__service {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.about__service-title {
+  @include technical-label(700);
+  margin: 0 0 var(--space-xs);
+  font-size: var(--fs-xs);
+}
+
+.about__service-description {
+  color: var(--vs-text-muted);
+  font-size: var(--fs-small);
+}
+
+@include below-desktop {
+  .about__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@include mobile {
+  .about__stat {
+    min-height: 8rem;
+  }
+}
