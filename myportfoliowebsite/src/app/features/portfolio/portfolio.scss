@@ -1,0 +1,137 @@
+@use 'mixins' as *;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.portfolio__filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.portfolio__grid {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-md);
+}
+
+.project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+        border-color: var(--accent-primary-light);
+    }
+
+    // O link do título cobre o card inteiro; o anel de foco aparece no card.
+    &:has(.project__link:focus-visible) {
+        @include focus-ring;
+    }
+}
+
+.project__thumb {
+    display: grid;
+    place-items: center;
+    height: 104px;
+    background-color: var(--vs-thumb-bg);
+    border-bottom: var(--border);
+    font-family: var(--font-mono);
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.project__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+}
+
+.project__title {
+    font-family: var(--font-body);
+    font-size: var(--fs-lead);
+    font-weight: 600;
+}
+
+.project__link {
+    color: inherit;
+    text-decoration: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.project__description {
+    color: var(--vs-text-muted);
+    font-size: var(--fs-small);
+}
+
+.project__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    margin-top: auto;
+    padding-top: var(--space-sm);
+    border-top: var(--border-dashed);
+}
+
+.project__source {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--syntax-type);
+    font-family: var(--font-mono);
+    font-size: var(--fs-label);
+}
+
+// Card fixo no fim da grid: avisa que o portfólio está em construção (aparece em qualquer filtro).
+.portfolio__soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-sm);
+    min-height: 14rem;
+    padding: var(--space-lg);
+    border: var(--border-dashed);
+    border-radius: var(--radius-md);
+}
+
+.portfolio__soon-title {
+    color: var(--vs-text-strong);
+    font-weight: 600;
+}
+
+.portfolio__soon-text {
+    color: var(--vs-text-muted);
+    font-size: var(--fs-small);
+}
+
+@include below-desktop {
+    .portfolio__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@include mobile {
+    .portfolio__grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
