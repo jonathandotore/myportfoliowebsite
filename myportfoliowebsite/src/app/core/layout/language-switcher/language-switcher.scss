@@ -1,0 +1,25 @@
+@use 'mixins' as *;
+
+:host {
+  display: inline-flex;
+}
+
+.language-switcher {
+  @include technical-label(700);
+  @include touch-target;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-full);
+  color: var(--on-accent);
+  font-size: var(--fs-label);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+
+  &:hover {
+    background-color: var(--nav-active-bg);
+  }
+}

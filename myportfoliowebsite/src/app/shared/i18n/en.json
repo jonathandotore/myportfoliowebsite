@@ -3,5 +3,24 @@
     "siteTitle": "Jonathan · .NET & Angular Developer",
     "pageTitle": "{{page}} · Jonathan",
     "description": "Portfolio of Jonathan, a .NET and Angular developer: robust .NET APIs and modern Angular interfaces."
+  },
+  "language": {
+    "toggleShort": "PT",
+    "toggleLabel": "PT — switch language to Portuguese"
+  },
+  "nav": {
+    "mainLabel": "Main menu",
+    "quickLabel": "Quick navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "home": "Home",
+    "about": "About me",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "profile": {
+    "photoAlt": "Photo of Jonathan",
+    "photoPlaceholder": "[YOUR PHOTO]"
   }
 }
