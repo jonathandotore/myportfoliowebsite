@@ -5,6 +5,9 @@
 }
 
 .home {
+  // Largura da foto. O `{ }` de fundo é dimensionado a partir dela para sempre "abraçar" o quadro.
+  --home-photo-width: 360px;
+
   display: grid;
   grid-template-columns: 55fr 45fr;
   min-height: 100vh;
@@ -62,9 +65,9 @@
   position: relative;
   display: grid;
   place-items: center;
-  // Lateral direita reserva espaço para o menu flutuante.
-  padding: var(--space-2xl) calc(var(--floating-menu-width) + var(--floating-menu-offset) * 2 + var(--space-lg))
-    var(--space-2xl) var(--space-2xl);
+  // Padding simétrico: a foto fica centralizada no painel e alinhada com o `{ }` de fundo.
+  // A foto tem no máximo 360px, então o menu flutuante nunca encosta nela (sobram ≥ 90px no desktop).
+  padding: var(--space-2xl);
   background-color: var(--vs-panel);
   border-left: var(--border);
   overflow: hidden;
@@ -77,7 +80,10 @@
   place-items: center;
   color: var(--vs-panel-alt);
   font-family: var(--font-display);
-  font-size: min(60vh, 32vw);
+  // Proporcional à foto (não à tela): as chaves ficam dos dois lados do quadro, como `{ foto }`.
+  font-size: calc(var(--home-photo-width) * 1.45);
+  // O glifo da chave fica abaixo do centro da linha; sobe para ficar centrado na foto.
+  translate: 0 -0.09em;
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
@@ -87,11 +93,15 @@
 
 .home__photo {
   position: relative;
-  max-width: 360px;
+  max-width: var(--home-photo-width);
 }
 
 @include below-desktop {
   .home {
+    // O conjunto `{ foto }` ocupa ~1,62× a largura da foto: em telas estreitas a foto encolhe
+    // para as chaves caberem inteiras na largura disponível.
+    --home-photo-width: min(280px, calc((100vw - 2 * var(--space-md)) / 1.62));
+
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -104,10 +114,6 @@
     padding: var(--space-xl);
     border-top: var(--border);
     border-left: 0;
-  }
-
-  .home__photo {
-    max-width: 280px;
   }
 }
 

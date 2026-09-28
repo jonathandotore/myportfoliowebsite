@@ -8,9 +8,19 @@
   aspect-ratio: 18 / 23;
   height: auto;
   background-color: var(--vs-bg);
-  border: var(--border-dashed);
+  border: var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
+}
+
+// Na Home a foto fica levemente translúcida sobre o fundo escuro do quadro, integrando-se ao painel.
+:host(.profile-photo--framed) .profile-photo__img {
+  opacity: 0.8;
+}
+
+// Moldura tracejada só enquanto não há foto: sinaliza o espaço reservado.
+:host(.profile-photo--framed.profile-photo--empty) {
+  border: var(--border-dashed);
 }
 
 :host(.profile-photo--avatar) {
@@ -27,6 +37,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  // Recorte ancorado no topo: no quadrado da sidebar e no círculo do avatar a cabeça não é cortada.
+  object-position: 50% 10%;
 }
 
 .profile-photo__placeholder {

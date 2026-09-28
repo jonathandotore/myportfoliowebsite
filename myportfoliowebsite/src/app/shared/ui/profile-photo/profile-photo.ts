@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { booleanAttribute, Component, computed, input } from '@angular/core';
 
 import { Icon } from '../icon/icon';
 
@@ -20,6 +20,7 @@ const ICON_SIZE: Record<ProfilePhotoVariant, number> = { panel: 48, framed: 56, 
   host: {
     '[class.profile-photo--framed]': "variant() === 'framed'",
     '[class.profile-photo--avatar]': "variant() === 'avatar'",
+    '[class.profile-photo--empty]': '!src()',
   },
 })
 export class ProfilePhoto {
@@ -28,6 +29,8 @@ export class ProfilePhoto {
   /** Texto do placeholder (ex.: "[SUA FOTO]"). */
   readonly placeholder = input.required<string>();
   readonly variant = input<ProfilePhotoVariant>('panel');
+  /** Foto na primeira dobra da página (Home): carrega com prioridade em vez de `lazy`. */
+  readonly priority = input(false, { transform: booleanAttribute });
 
   protected readonly iconSize = computed(() => ICON_SIZE[this.variant()]);
 }

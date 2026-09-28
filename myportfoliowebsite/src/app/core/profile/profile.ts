@@ -26,7 +26,8 @@ export interface ProfileStats {
 
 export const PROFILE: Profile = {
     name: 'Jonathan',
-    photoUrl: null,
+    // Relativo (sem "/" inicial) por causa do --base-href=/myportfoliowebsite/ do GitHub Pages.
+    photoUrl: 'jonathan-bw-v2.jpg',
     stats: {
         experience: '2+',
         projects: '2+',
