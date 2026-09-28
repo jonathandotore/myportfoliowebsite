@@ -67,5 +67,112 @@
         "description": "Integração entre sistemas, bancos de dados e serviços em nuvem."
       }
     }
+  },
+  "resume": {
+    "header": {
+      "file": "curriculo.component.ts",
+      "title": "Currículo"
+    },
+    "months": ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
+    "present": "atual",
+    "experience": {
+      "variable": "experiencia",
+      "heading": "Experiência",
+      "stackLabel": "Tecnologias usadas",
+      "items": {
+        "ecori": {
+          "role": "Software Developer",
+          "summary": "Desenvolvedor pleno em uma plataforma de e-commerce B2B para revendedores de equipamentos de energia solar, implementando novas funcionalidades e garantindo a manutenibilidade do sistema em produção.",
+          "highlights": [
+            {
+              "title": "Otimização de performance",
+              "text": "Refatorei rotinas críticas e otimizei queries com Dapper e EF Core, reduzindo o tempo de resposta de uma consulta crítica de 4s para 400ms (queda de 90%)."
+            },
+            {
+              "title": "Migração de stack",
+              "text": "Participei da migração de parte da plataforma legada de .NET 8 / Angular 11 para .NET 10 / Angular 22, reduzindo dívida técnica e eliminando vulnerabilidades de segurança."
+            },
+            {
+              "title": "Arquitetura e padrões",
+              "text": "Apliquei Vertical Slice Architecture, DDD e CQRS no desenvolvimento de microsserviços, assegurando separação de responsabilidades e evolução sustentável do código."
+            }
+          ]
+        },
+        "allRisk": {
+          "role": "Software Developer",
+          "summary": "Desenvolvimento full stack com C#, .NET e Angular, entregando soluções completas para aplicações internas.",
+          "highlights": [
+            {
+              "title": "Frontend do zero",
+              "text": "Projetei e desenvolvi integralmente o frontend de uma aplicação interna como único desenvolvedor frontend inicial, definindo arquitetura de componentes, padrões de código e integração com APIs."
+            },
+            {
+              "title": "Backend estruturado",
+              "text": "Contribuí para a implementação do backend em .NET seguindo DDD e CQRS, ajudando a estruturar as funcionalidades que hoje sustentam o núcleo do sistema."
+            },
+            {
+              "title": "Colaboração e qualidade",
+              "text": "Atuei em equipe multidisciplinar, participando de code reviews e garantindo aderência a boas práticas de desenvolvimento."
+            }
+          ]
+        },
+        "sifat": {
+          "role": "Software Developer",
+          "summary": "Atuação como desenvolvedor full stack, com PHP no backend, Vue.js no frontend e persistência de dados com Laravel/Eloquent."
+        },
+        "itravelDeveloper": {
+          "role": "Desenvolvedor C# ASP.NET",
+          "summary": "Desenvolvimento de aplicações backend com C# e ASP.NET Core, com foco em APIs REST e microsserviços.",
+          "highlights": [
+            {
+              "title": "Backend",
+              "text": "Implementei e mantive funcionalidades backend, garantindo performance e aderência a requisitos de negócio."
+            },
+            {
+              "title": "APIs e integrações",
+              "text": "Desenvolvi APIs REST e realizei integrações com serviços internos e externos, assegurando comunicação eficiente entre componentes."
+            },
+            {
+              "title": "Persistência",
+              "text": "Utilizei Dapper e Entity Framework com SQL Server para acesso a dados, otimizando consultas e garantindo integridade."
+            },
+            {
+              "title": "Qualidade",
+              "text": "Participei do versionamento com Git e colaborei em práticas de CI/CD."
+            }
+          ]
+        },
+        "itravelSupport": {
+          "role": "Analista de Suporte de Sistemas (Pleno)"
+        },
+        "multidrogas": {
+          "role": "Consultor de implantação"
+        }
+      }
+    },
+    "education": {
+      "variable": "formacao",
+      "heading": "Formação",
+      "items": {
+        "fmu": {
+          "course": "CST em Análise e Desenvolvimento de Sistemas",
+          "description": "Em andamento — conclusão prevista para junho de 2027."
+        }
+      }
+    },
+    "certifications": {
+      "variable": "certificacoes",
+      "heading": "Certificações",
+      "items": {
+        "dataAccess": "Acesso a dados com .NET, C#, Dapper e SQL Server",
+        "csharpFirstSteps": "C# primeiros passos: Lógica de Programação e Algoritmos",
+        "databaseSql": "O curso completo de Banco de Dados e SQL, sem mistérios!",
+        "csharpComplete": "C# COMPLETO: Programação Orientada a Objetos + Projetos"
+      }
+    },
+    "stack": {
+      "label": "stack:",
+      "listLabel": "Tecnologias"
+    }
   }
 }
