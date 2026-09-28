@@ -1,0 +1,21 @@
+@use 'mixins' as *;
+
+// Fica fora da tela até receber foco pelo teclado (primeiro Tab da página).
+.skip-link {
+  @include technical-label(700);
+  position: fixed;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: var(--z-skip-link);
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--syntax-local);
+  border-radius: var(--radius-sm);
+  color: var(--on-highlight);
+  font-size: var(--fs-small);
+  text-decoration: none;
+  transform: translateY(calc(-100% - var(--space-md)));
+
+  &:focus {
+    transform: none;
+  }
+}
