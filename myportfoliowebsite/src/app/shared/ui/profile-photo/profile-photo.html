@@ -1,0 +1,11 @@
+@if (src(); as src) {
+  <img class="profile-photo__img" [src]="src" [alt]="alt()" />
+} @else {
+  <!-- TODO: placeholder — some quando PROFILE.photoUrl for preenchido (core/profile/profile.ts) -->
+  <div class="profile-photo__placeholder" aria-hidden="true">
+    <app-icon name="user" [size]="iconSize()" />
+    @if (variant() !== 'avatar') {
+      <span class="profile-photo__label">{{ placeholder() }}</span>
+    }
+  </div>
+}

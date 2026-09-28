@@ -1,0 +1,38 @@
+// Estilo dos controles de formulário marcados com a diretiva `appField` (shared/ui/form-field).
+// Fica global porque diretivas não têm estilos próprios e <input>/<textarea> não aceitam componentes.
+
+.field {
+  display: block;
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: 0.6em 0.75em;
+  background-color: var(--vs-bg);
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--vs-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  transition: border-color var(--transition-fast);
+
+  &::placeholder {
+    color: var(--vs-text-dim);
+  }
+
+  &:hover {
+    border-color: var(--vs-text-dim);
+  }
+
+  &:focus-visible {
+    border-color: var(--focus-ring);
+  }
+
+  &[aria-invalid='true'] {
+    border-color: var(--feedback-error);
+  }
+}
+
+textarea.field {
+  min-height: 6rem;
+  resize: vertical;
+}

@@ -1,0 +1,5 @@
+<label class="form-field__label" [for]="controlId()">{{ label() }}</label>
+<ng-content />
+@if (error(); as error) {
+  <p class="form-field__error" [id]="errorId()">{{ error }}</p>
+}
