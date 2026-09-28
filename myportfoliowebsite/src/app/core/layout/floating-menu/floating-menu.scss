@@ -55,7 +55,8 @@
   opacity: 0.35;
 }
 
-@include mobile {
+// Barra fixa inferior no mobile e em telas baixas (celular deitado).
+@include bottom-nav {
   :host {
     top: auto;
     right: 0;

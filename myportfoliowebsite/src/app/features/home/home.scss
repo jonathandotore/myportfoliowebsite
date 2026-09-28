@@ -117,12 +117,19 @@
   }
 }
 
-@include mobile {
+@include bottom-nav {
   .home {
     // Espaço para a barra de navegação fixa inferior.
     padding-bottom: calc(var(--touch-target) + var(--space-md));
   }
 
+  // Sem o menu vertical, a lateral direita do texto não precisa mais reservar espaço.
+  .home__intro {
+    padding-right: var(--space-xl);
+  }
+}
+
+@include mobile {
   .home__intro,
   .home__visual {
     padding: var(--space-xl) var(--space-md);
