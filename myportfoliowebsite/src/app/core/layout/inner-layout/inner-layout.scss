@@ -1,0 +1,41 @@
+@use 'mixins' as *;
+
+:host {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.inner-layout__content {
+  // Lateral direita reserva espaço para o menu flutuante.
+  padding: var(--space-xl) calc(var(--floating-menu-width) + var(--floating-menu-offset) * 2 + var(--space-lg))
+    var(--space-xl) var(--space-2xl);
+
+  // Recebe foco programático do "pular para o conteúdo"; não é um controle interativo.
+  &:focus {
+    outline: none;
+  }
+}
+
+.inner-layout__container {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+}
+
+@include below-desktop {
+  :host {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  .inner-layout__content {
+    padding: var(--space-xl) calc(var(--floating-menu-width) + var(--floating-menu-offset) * 2) var(--space-xl)
+      var(--space-xl);
+  }
+}
+
+@include mobile {
+  .inner-layout__content {
+    padding: var(--space-lg) var(--space-md) calc(var(--touch-target) + var(--space-2xl));
+  }
+}

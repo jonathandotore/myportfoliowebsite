@@ -1,0 +1,51 @@
+<div class="side-nav__photo">
+  <app-profile-photo
+    [src]="profile.photoUrl"
+    [alt]="'profile.photoAlt' | translate"
+    [placeholder]="'profile.photoPlaceholder' | translate"
+  />
+</div>
+
+<div class="side-nav__bar">
+  <app-profile-photo
+    variant="avatar"
+    [src]="profile.photoUrl"
+    [alt]="'profile.photoAlt' | translate"
+    [placeholder]="'profile.photoPlaceholder' | translate"
+  />
+  <span class="side-nav__brand">{{ profile.name }}</span>
+  <button
+    type="button"
+    class="side-nav__toggle"
+    aria-controls="side-nav-menu"
+    [attr.aria-expanded]="menuOpen()"
+    [attr.aria-label]="(menuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | translate"
+    (click)="toggleMenu()"
+  >
+    <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+  </button>
+</div>
+
+<nav
+  id="side-nav-menu"
+  class="side-nav__menu"
+  [class.is-open]="menuOpen()"
+  [attr.aria-label]="'nav.mainLabel' | translate"
+>
+  <ul class="side-nav__list">
+    @for (item of items; track item.link) {
+      <li>
+        <a
+          class="side-nav__link"
+          [routerLink]="item.link"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+          (click)="closeMenu()"
+        >
+          {{ item.labelKey | translate }}
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

@@ -1,0 +1,21 @@
+<nav class="floating-menu" [attr.aria-label]="'nav.quickLabel' | translate">
+  <ul class="floating-menu__list">
+    @for (item of items; track item.link) {
+      <li>
+        <a
+          class="floating-menu__link"
+          [routerLink]="item.link"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+          [attr.aria-label]="item.labelKey | translate"
+          [attr.title]="item.labelKey | translate"
+        >
+          <app-icon [name]="item.icon" />
+        </a>
+      </li>
+    }
+  </ul>
+  <span class="floating-menu__divider" aria-hidden="true"></span>
+  <app-language-switcher />
+</nav>
