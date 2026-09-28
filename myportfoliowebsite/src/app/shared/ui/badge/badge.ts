@@ -1,5 +1,4 @@
 import { Component, computed, input } from '@angular/core';
-
 import { Tone, toneColor } from '../tone';
 
 /**
@@ -25,7 +24,6 @@ export type BadgeSize = 'sm' | 'md';
 export class Badge {
   readonly variant = input<BadgeVariant>('solid');
   readonly size = input<BadgeSize>('md');
-  /** Cor do texto nas variantes `outline` e `text`. */
   readonly tone = input<Tone>('text');
 
   protected readonly color = computed(() => toneColor(this.tone()));

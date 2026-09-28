@@ -1,0 +1,31 @@
+<main id="main-content" class="home" tabindex="-1">
+  <section class="home__intro" aria-labelledby="home-title">
+    <app-code-comment size="md">{{ 'home.greeting' | translate }}</app-code-comment>
+
+    <h1 id="home-title" class="home__title">
+      <span class="home__title-prefix">{{ 'home.headingPrefix' | translate }}</span>&ngsp;<span class="home__title-name">{{ profile.name }}</span>
+    </h1>
+
+    <app-badge>{{ 'home.role' | translate }}</app-badge>
+
+    <p class="home__lead">{{ 'home.intro' | translate }}</p>
+
+    <app-code-block class="home__code" [lines]="codeLines" />
+
+    <div class="home__actions">
+      <a appButton [routerLink]="aboutLink">{{ 'home.ctaAbout' | translate }}</a>
+      <a appButton variant="secondary" [routerLink]="contactLink">{{ 'home.ctaContact' | translate }}</a>
+    </div>
+  </section>
+
+  <div class="home__visual">
+    <span class="home__watermark" aria-hidden="true">&#123;&nbsp;&#125;</span>
+    <app-profile-photo
+      class="home__photo"
+      variant="framed"
+      [src]="profile.photoUrl"
+      [alt]="'profile.photoAlt' | translate"
+      [placeholder]="'profile.photoPlaceholder' | translate"
+    />
+  </div>
+</main>

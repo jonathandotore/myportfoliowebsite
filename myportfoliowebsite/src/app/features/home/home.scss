@@ -1,0 +1,124 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  min-height: 100vh;
+
+  // Recebe foco programático do "pular para o conteúdo"; não é um controle interativo.
+  &:focus {
+    outline: none;
+  }
+}
+
+.home__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-2xl) var(--space-xl) var(--space-2xl) calc(var(--space-2xl) + var(--space-md));
+}
+
+.home__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  line-height: 1;
+}
+
+.home__title-prefix {
+  font-size: var(--fs-hero-prefix);
+}
+
+.home__title-name {
+  color: var(--syntax-type);
+  font-size: var(--fs-hero);
+  letter-spacing: var(--tracking-hero);
+}
+
+.home__lead {
+  max-width: 36rem;
+  color: var(--vs-text-muted);
+  font-size: var(--fs-lead);
+}
+
+.home__code {
+  width: 100%;
+  max-width: 35rem;
+}
+
+.home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.home__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  // Lateral direita reserva espaço para o menu flutuante.
+  padding: var(--space-2xl) calc(var(--floating-menu-width) + var(--floating-menu-offset) * 2 + var(--space-lg))
+    var(--space-2xl) var(--space-2xl);
+  background-color: var(--vs-panel);
+  border-left: var(--border);
+  overflow: hidden;
+}
+
+.home__watermark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--vs-panel-alt);
+  font-family: var(--font-display);
+  font-size: min(60vh, 32vw);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.home__photo {
+  position: relative;
+  max-width: 360px;
+}
+
+@include below-desktop {
+  .home {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home__intro {
+    padding: var(--space-2xl) calc(var(--floating-menu-width) + var(--floating-menu-offset) * 2) var(--space-xl)
+      var(--space-xl);
+  }
+
+  .home__visual {
+    padding: var(--space-xl);
+    border-top: var(--border);
+    border-left: 0;
+  }
+
+  .home__photo {
+    max-width: 280px;
+  }
+}
+
+@include mobile {
+  .home {
+    // Espaço para a barra de navegação fixa inferior.
+    padding-bottom: calc(var(--touch-target) + var(--space-md));
+  }
+
+  .home__intro,
+  .home__visual {
+    padding: var(--space-xl) var(--space-md);
+  }
+}

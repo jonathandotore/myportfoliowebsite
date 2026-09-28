@@ -4,6 +4,9 @@
     "pageTitle": "{{page}} · Jonathan",
     "description": "Portfolio of Jonathan, a .NET and Angular developer: robust .NET APIs and modern Angular interfaces."
   },
+  "a11y": {
+    "skipToContent": "Skip to content"
+  },
   "language": {
     "toggleShort": "PT",
     "toggleLabel": "PT — switch language to Portuguese"
@@ -22,5 +25,13 @@
   "profile": {
     "photoAlt": "Photo of Jonathan",
     "photoPlaceholder": "[YOUR PHOTO]"
+  },
+  "home": {
+    "greeting": "Hello, welcome!",
+    "headingPrefix": "I am",
+    "role": ".NET & Angular Developer",
+    "intro": "I build robust APIs in .NET and modern interfaces in Angular.",
+    "ctaAbout": "About me",
+    "ctaContact": "Contact"
   }
 }
