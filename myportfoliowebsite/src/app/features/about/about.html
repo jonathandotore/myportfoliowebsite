@@ -1,0 +1,40 @@
+<app-section-header
+  [file]="'about.header.file' | translate"
+  [heading]="'about.header.title' | translate"
+/>
+
+<div class="about__intro">
+  <p class="about__lead">
+    {{ 'about.intro.prefix' | translate }} <strong class="about__name">{{ profile.name }}</strong>,
+    <span class="about__role">{{ 'about.intro.role' | translate }}</span>
+  </p>
+  <p class="about__bio">{{ 'about.bio' | translate }}</p>
+</div>
+
+<div class="about__grid">
+  <ul appCard surface="code" padding="none" class="about__stats" [attr.aria-label]="'about.stats.label' | translate">
+    @for (stat of stats; track stat.labelKey) {
+      <li class="about__stat">
+        <span class="about__stat-value">{{ stat.value ?? ('about.stats.placeholderValue' | translate) }}</span>
+        <span class="about__stat-label">{{ stat.labelKey | translate }}</span>
+      </li>
+    }
+  </ul>
+
+  <section class="about__services" aria-labelledby="about-services-title">
+    <h2 id="about-services-title">{{ 'about.services.title' | translate }}</h2>
+    <ul class="about__service-list">
+      @for (service of services; track service.titleKey) {
+        <li class="about__service">
+          <app-icon-tile [icon]="service.icon" [tone]="service.tone" />
+          <div>
+            <h3 class="about__service-title" [style.color]="service.color">
+              {{ service.titleKey | translate }}
+            </h3>
+            <p class="about__service-description">{{ service.descriptionKey | translate }}</p>
+          </div>
+        </li>
+      }
+    </ul>
+  </section>
+</div>

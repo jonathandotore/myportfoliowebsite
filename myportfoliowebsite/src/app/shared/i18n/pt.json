@@ -33,5 +33,39 @@
     "intro": "Construo APIs robustas em .NET e interfaces modernas em Angular.",
     "ctaAbout": "Sobre mim",
     "ctaContact": "Contato"
+  },
+  "about": {
+    "header": {
+      "file": "sobre-mim.component.ts",
+      "title": "Sobre mim"
+    },
+    "intro": {
+      "prefix": "Eu sou",
+      "role": "Desenvolvedor .NET & Angular"
+    },
+    "bio": "Desenvolvedor full-stack com foco em .NET no back-end e Angular no front-end.",
+    "stats": {
+      "label": "Em números",
+      "placeholderValue": "[X]+",
+      "experience": "Anos de experiência",
+      "projects": "Projetos entregues",
+      "technologies": "Tecnologias",
+      "certifications": "Certificações"
+    },
+    "services": {
+      "title": "O que eu faço?",
+      "backend": {
+        "title": "Back-end · .NET / C#",
+        "description": "APIs REST com ASP.NET Core, Entity Framework e arquitetura limpa."
+      },
+      "frontend": {
+        "title": "Front-end · Angular / TS",
+        "description": "SPAs responsivas com Angular, TypeScript e RxJS."
+      },
+      "integrations": {
+        "title": "APIs & Integrações",
+        "description": "Integração entre sistemas, bancos de dados e serviços em nuvem."
+      }
+    }
   }
 }

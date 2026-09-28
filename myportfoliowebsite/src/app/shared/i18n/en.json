@@ -33,5 +33,39 @@
     "intro": "I build robust APIs in .NET and modern interfaces in Angular.",
     "ctaAbout": "About me",
     "ctaContact": "Contact"
+  },
+  "about": {
+    "header": {
+      "file": "about-me.component.ts",
+      "title": "About me"
+    },
+    "intro": {
+      "prefix": "I am",
+      "role": ".NET & Angular Developer"
+    },
+    "bio": "Full-stack developer focused on .NET on the back end and Angular on the front end.",
+    "stats": {
+      "label": "In numbers",
+      "placeholderValue": "[X]+",
+      "experience": "Years of experience",
+      "projects": "Projects delivered",
+      "technologies": "Technologies",
+      "certifications": "Certifications"
+    },
+    "services": {
+      "title": "What do I do?",
+      "backend": {
+        "title": "Back-end · .NET / C#",
+        "description": "REST APIs with ASP.NET Core, Entity Framework and clean architecture."
+      },
+      "frontend": {
+        "title": "Front-end · Angular / TS",
+        "description": "Responsive SPAs with Angular, TypeScript and RxJS."
+      },
+      "integrations": {
+        "title": "APIs & Integrations",
+        "description": "Integration between systems, databases and cloud services."
+      }
+    }
   }
 }

@@ -8,6 +8,19 @@ export const routes: Routes = [
     pathMatch: 'full',
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
   },
+  {
+    // Páginas internas: sidebar + conteúdo. O `title` de cada rota é uma chave i18n.
+    path: '',
+    loadComponent: () =>
+      import('./core/layout/inner-layout/inner-layout').then((m) => m.InnerLayout),
+    children: [
+      {
+        path: ROUTE_PATHS.about,
+        title: 'nav.about',
+        loadComponent: () => import('./features/about/about').then((m) => m.About),
+      },
+    ],
+  },
   // Páginas internas ainda não implementadas: redirecionam para a Home até ganharem rota própria.
   { path: '**', redirectTo: ROUTE_PATHS.home },
 ];
