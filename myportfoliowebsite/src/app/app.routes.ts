@@ -19,6 +19,11 @@ export const routes: Routes = [
         title: 'nav.about',
         loadComponent: () => import('./features/about/about').then((m) => m.About),
       },
+      {
+        path: ROUTE_PATHS.resume,
+        title: 'nav.resume',
+        loadComponent: () => import('./features/resume/resume').then((m) => m.Resume),
+      },
     ],
   },
   // Páginas internas ainda não implementadas: redirecionam para a Home até ganharem rota própria.

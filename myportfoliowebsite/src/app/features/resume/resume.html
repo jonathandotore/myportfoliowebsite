@@ -1,0 +1,78 @@
+<app-section-header
+  [file]="'resume.header.file' | translate"
+  [heading]="'resume.header.title' | translate"
+/>
+
+<section class="resume__section">
+  <app-code-declaration
+    [name]="'resume.experience.variable' | translate"
+    [label]="'resume.experience.heading' | translate"
+  />
+  <div class="resume__grid resume__grid--wide">
+    @for (item of experience; track item.id) {
+      <article appCard class="resume__card">
+        <app-badge size="sm">{{ period(item.start, item.end) }}</app-badge>
+        <h3 class="resume__title">{{ item.roleKey | translate }}</h3>
+        <p class="resume__org">{{ item.company }}</p>
+
+        @if (item.summaryKey; as summaryKey) {
+          <p class="resume__text">{{ summaryKey | translate }}</p>
+        }
+
+        @if (item.highlightsKey; as highlightsKey) {
+          <ul class="resume__highlights">
+            @for (highlight of highlightsKey | translate; track $index) {
+              <li><strong>{{ highlight.title }}:</strong> {{ highlight.text }}</li>
+            }
+          </ul>
+        }
+
+        @if (item.stack.length) {
+          <ul class="resume__tech" [attr.aria-label]="'resume.experience.stackLabel' | translate">
+            @for (tech of item.stack; track tech) {
+              <li>{{ tech }}</li>
+            }
+          </ul>
+        }
+      </article>
+    }
+  </div>
+</section>
+
+<section class="resume__section">
+  <app-code-declaration
+    [name]="'resume.education.variable' | translate"
+    [label]="'resume.education.heading' | translate"
+  />
+  <div class="resume__grid">
+    @for (item of education; track item.id) {
+      <article appCard class="resume__card">
+        <app-badge size="sm">{{ period(item.start, item.end) }}</app-badge>
+        <h3 class="resume__title">{{ item.courseKey | translate }}</h3>
+        <p class="resume__org">{{ item.institution }}</p>
+        <p class="resume__text">{{ item.descriptionKey | translate }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="resume__section">
+  <app-code-declaration
+    [name]="'resume.certifications.variable' | translate"
+    [label]="'resume.certifications.heading' | translate"
+  />
+  <ul class="resume__grid">
+    @for (key of certifications; track key) {
+      <li appCard class="resume__cert">{{ key | translate }}</li>
+    }
+  </ul>
+</section>
+
+<div class="resume__stack">
+  <app-code-comment size="md">{{ 'resume.stack.label' | translate }}</app-code-comment>
+  <ul class="resume__chips" [attr.aria-label]="'resume.stack.listLabel' | translate">
+    @for (tech of stack; track tech) {
+      <li><app-badge variant="outline">{{ tech }}</app-badge></li>
+    }
+  </ul>
+</div>
