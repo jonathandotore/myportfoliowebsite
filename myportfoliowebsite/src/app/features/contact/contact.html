@@ -1,0 +1,98 @@
+<app-section-header [file]="'contact.header.file' | translate" [heading]="'contact.header.title' | translate" />
+
+<div class="contact">
+    <section class="contact__info" aria-labelledby="contact-invite">
+        <h2 id="contact-invite" class="contact__invite">
+            {{ 'contact.invite.prefix' | translate }}
+            <span class="contact__highlight">{{ 'contact.invite.highlight' | translate }}</span>
+        </h2>
+        <p class="contact__intro">{{ 'contact.intro' | translate }}</p>
+
+        <ul class="contact__channels" [attr.aria-label]="'contact.channels.label' | translate">
+            <li class="channel">
+                <app-icon-tile icon="phone" tone="string" />
+                <div class="channel__body">
+                    <span class="channel__label">{{ 'contact.channels.phone' | translate }}</span>
+                    <span class="channel__value">{{ phone.display }}</span>
+                    <span class="channel__actions">
+                        <a class="channel__action" [href]="phone.whatsapp" target="_blank" rel="noopener noreferrer">
+                            {{ 'contact.channels.whatsapp' | translate }}
+                            <span class="visually-hidden">({{ 'contact.channels.opensInNewTab' | translate }})</span>
+                        </a>
+                        <a class="channel__action" [href]="phone.telegram" target="_blank" rel="noopener noreferrer">
+                            {{ 'contact.channels.telegram' | translate }}
+                            <span class="visually-hidden">({{ 'contact.channels.opensInNewTab' | translate }})</span>
+                        </a>
+                    </span>
+                </div>
+            </li>
+
+            <li class="channel">
+                <app-icon-tile icon="mail" tone="accent" />
+                <div class="channel__body">
+                    <span class="channel__label">{{ 'contact.channels.email' | translate }}</span>
+                    @for (email of emails; track email.address) {
+                        <a class="channel__link" [href]="email.href">{{ email.address }}</a>
+                    }
+                </div>
+            </li>
+
+            <li class="channel">
+                <app-icon-tile icon="linkedin" tone="keyword" />
+                <div class="channel__body">
+                    <span class="channel__label">{{ 'contact.channels.linkedin' | translate }}</span>
+                    <a class="channel__link" [href]="linkedin.href" target="_blank" rel="noopener noreferrer">
+                        {{ linkedin.label }}
+                        <span class="visually-hidden">({{ 'contact.channels.opensInNewTab' | translate }})</span>
+                    </a>
+                </div>
+            </li>
+
+            <li class="channel">
+                <app-icon-tile icon="code" tone="type" />
+                <div class="channel__body">
+                    <span class="channel__label">{{ 'contact.channels.github' | translate }}</span>
+                    <a class="channel__link" [href]="github.href" target="_blank" rel="noopener noreferrer">
+                        {{ github.label }}
+                        <span class="visually-hidden">({{ 'contact.channels.opensInNewTab' | translate }})</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <form
+        appCard
+        padding="lg"
+        class="contact__form"
+        [attr.aria-label]="'contact.form.label' | translate"
+        (submit)="onSubmit($event)"
+    >
+        <app-form-field class="contact__field" [label]="'contact.form.name' | translate" controlId="contact-name">
+            <input appField type="text" name="name" autocomplete="name" required />
+        </app-form-field>
+
+        <app-form-field class="contact__field" [label]="'contact.form.email' | translate" controlId="contact-email">
+            <input appField type="email" name="email" autocomplete="email" required />
+        </app-form-field>
+
+        <app-form-field
+            class="contact__field contact__field--full"
+            [label]="'contact.form.message' | translate"
+            controlId="contact-message"
+        >
+            <textarea appField name="message" rows="8" required></textarea>
+        </app-form-field>
+
+        <div class="contact__actions">
+            <button appButton type="submit">{{ 'contact.form.submit' | translate }}</button>
+        </div>
+    </form>
+</div>
+
+<p class="contact__footer">
+    <span aria-hidden="true">
+        <span class="contact__return">return</span>&ngsp;<span class="contact__string">"{{ 'contact.footer' | translate }}"</span>;
+    </span>
+    <span class="visually-hidden">{{ 'contact.footer' | translate }}</span>
+</p>

@@ -1,0 +1,159 @@
+@use 'mixins' as *;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.contact__invite {
+    font-family: var(--font-body);
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.contact__highlight {
+    color: var(--syntax-type);
+    font-weight: 600;
+}
+
+.contact__intro {
+    color: var(--vs-text-muted);
+}
+
+.contact__channels {
+    @include reset-list;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.channel {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.channel__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.channel__label {
+    @include technical-label(700);
+    color: var(--vs-text-dim);
+    font-size: var(--fs-label);
+}
+
+.channel__value,
+.channel__link {
+    color: var(--vs-text);
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    overflow-wrap: anywhere;
+}
+
+.channel__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch-target);
+    text-decoration-color: var(--vs-border);
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--syntax-type);
+        text-decoration-color: currentColor;
+    }
+}
+
+.channel__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+
+// WhatsApp / Telegram: pílulas com a cor do canal de telefone.
+.channel__action {
+    @include technical-label(700);
+    @include touch-target;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 var(--space-md);
+    border: 1px solid var(--syntax-string);
+    border-radius: var(--radius-full);
+    color: var(--syntax-string);
+    font-size: var(--fs-label);
+    text-decoration: none;
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--syntax-string) 12%, transparent);
+    }
+}
+
+.contact__form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+}
+
+.contact__field--full,
+.contact__actions {
+    grid-column: 1 / -1;
+}
+
+.contact__actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact__footer {
+    font-family: var(--font-mono);
+    font-size: var(--fs-lead);
+    text-align: center;
+}
+
+.contact__return {
+    color: var(--accent-primary-light);
+}
+
+.contact__string {
+    color: var(--syntax-string);
+}
+
+@include below-desktop {
+    .contact {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@include mobile {
+    .contact__form {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact__actions {
+        justify-content: stretch;
+
+        > * {
+            flex: 1;
+        }
+    }
+}

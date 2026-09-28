@@ -29,8 +29,13 @@ export const routes: Routes = [
                 title: 'nav.portfolio',
                 loadComponent: () => import('./features/portfolio/portfolio').then((m) => m.Portfolio),
             },
+            {
+                path: ROUTE_PATHS.contact,
+                title: 'nav.contact',
+                loadComponent: () => import('./features/contact/contact').then((m) => m.Contact),
+            },
         ],
     },
-    // Páginas internas ainda não implementadas: redirecionam para a Home até ganharem rota própria.
+    // Qualquer caminho desconhecido volta para a Home.
     { path: '**', redirectTo: ROUTE_PATHS.home },
 ];
